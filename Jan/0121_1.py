@@ -24,4 +24,17 @@
 
 ################## 런타임 에러^^
 
-T = 
+T = int(input()) # 테스트 case 수
+print()
+N = []
+candy = []
+for test in range(T):
+    N += [int(input())]
+    temp = 0
+    for i in range(N[test]):
+        temp += int(input())
+    candy += [temp]
+    print()
+
+for test in range(T):
+    print("No") if candy[test]%N[test] else print("Yes")
