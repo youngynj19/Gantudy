@@ -6,7 +6,8 @@ in_ls, out_ls = [], [] # 인풋, 아웃풋 리스트
 for i in range(C): # 각 케이스에 따라
     temp = list(map(int, input().split()))
     in_ls += [temp]
-# in_ls[i].append(list(map(int, input().split()))) # 각 케이스 학생수 + 점수 받기
+# in_ls[i].append(list(map(int, input().split())))
+# 각 케이스 학생수 + 점수 받기 ... [i]때문에 안됐더라구요^^;;;
 
 for case in in_ls: # 각 case마다 print
     grades = case[1::] # 점수만 따로 빼서 리스트 만들기
