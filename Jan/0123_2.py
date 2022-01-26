@@ -32,6 +32,7 @@
 
 C = int(input()) # 테스트 케이스 개수
 in_ls = []
+# in_ls, out_ls = [], [] # 인풋, 아웃풋 리스트
 
 for i in range(C): # 각 케이스에 따라
     # temp = list(map(int, input().split()))

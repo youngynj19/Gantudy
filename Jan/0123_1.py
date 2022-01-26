@@ -15,3 +15,4 @@ for i in range(T): # 각 케이스에 따라 split으로 받고 list에 추가
 
 for i in range(T):
     for j in range(N[i]):
+        ......
