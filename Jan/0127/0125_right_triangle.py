@@ -7,7 +7,7 @@ while True:
     if triangle == [0, 0, 0]: # 종료조건
         break
     else:
-        triangle.sort()
+        triangle.sort() 
         # 조건식이 너무 길어져서 변수로 대체(가독성)
         right = triangle[0]**2 + triangle[1]**2 == triangle[2]**2
         print('right') if right else print('wrong')

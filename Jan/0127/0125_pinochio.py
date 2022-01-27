@@ -13,4 +13,4 @@ gene = input()
 # for count in ACGT:
 #     result *= count if count > 0 else 1
 # print(result)
-print(gene.count('A')*gene.count('C')*gene.count('G')*gene.count('T'))
+print((gene.count('A')*gene.count('C')*gene.count('G')*gene.count('T'))%1000000007)
