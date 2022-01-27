@@ -2,6 +2,9 @@
 
 N = int(input())
 
+# 매 for문마다 input받고 result 출력
+# O에 따라서 점수 늘어나는걸 stack으로
+
 for i in range(N):
     ox = input()
     result, stack = 0, 1 # result, stack 초기화, stack은 O를 만날 때마다 1씩 증가시켜줄 예정
