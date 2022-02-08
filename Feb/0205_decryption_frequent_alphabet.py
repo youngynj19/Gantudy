@@ -5,6 +5,11 @@ N = int(input())
 
 for i in range(N):
     test_case = input()
+    
+    # item_getter
+    # 람다써보기! - 리스트안에 리스트
+    # 디스코드 참고
+
     # 딕셔너리에 넣고
     # sort 해서 - sort 함수 없습니다^^
     # 맨 뒤
