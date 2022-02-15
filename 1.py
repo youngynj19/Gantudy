@@ -1,4 +1,98 @@
+# # 경우의수
+# # 1X
+# # 2X
+# # 2X
+# # 2X
+# # 2
+# # = 2^4
+# # = 2^(n-1)
+
+# # [[0],[0,1],[0,1,2],[0,1,2,3],...,[0,...,n]]
+# # 본인 or 본인+1
+# # 이거 ttt ttf tft tff ftt ftf fft fff 이렇게 하는 문제임
+
+# N = int(input())
+
+# numbers = []
+# for i in range(N):
+#     numbers.append(list(map(int, input().split())))
+
+# result = 0
+# for i in range(2**(N-1)): # 총 경우의 수에 대해
+#     # 카운터를 넣어서
+#     # 카운터 하나가 증가할때마다
+#     # j문 안쪽에서 if문 처리한 다음에 k가 올지 k+1올지 결정
+#     # 이전 k 받아줄 변수 하나
+#     # k일지 k+1일지 결정해줄 변수 하나
+#     summation = 0
+#     k = i
+#     m = 0
+#     l = 0
+#     for j in range(N):
+#         m = m + l # 첫 번째 m은 무조건 0
+#         # print(i, j, m, "*****", k, l)
+#         summation += numbers[j][m]
+#         l = k % 2 # 그 뒤로 2진법으로 바꾼 수의 첫째자리 ~ n-1째자리까지
+#         # 만약 0이면 다음 인덱스도 그대로 1이면 1증가한 인덱스
+#         k = k // 2
+
+#     if summation > result:
+#         result = summation
+# print(result)
+
+
+
+
+
+
+
+
+'''
+input 받은 값을 전에 받은 값에다가 그대로 더하게
+인풋+를 쌓아둘 리스트
+인풋을 받을 리스트
+
+인풋+ : 1, 2, 4, 8 ,16
+인풋 : 1, 2, 3, 4, 5
+
+인풋[0]
+인풋+[0]
+
+인풋[1]
+인풋+ for문 돌면서
+
+
+
+1층 - 2^0
+2층 - 2^1
+3층 - 2^2
+4층 - 2^3
+n층 - 2^(n-1)
+
+'''
+
 N = int(input())
+
+numbers = [int(input)]
+for i in range(N): # N = 5
+    temp_numbers = []
+    temp = list(map(int, input().split()))
+    print('t:',temp)
+    for j in range(len(numbers)):
+        temp_numbers.append(numbers[j]+temp[(j+1)//2])
+        if i != 0:
+            temp_numbers.append(numbers[j]+temp[((j+1)//2)+1])
+    numbers = temp_numbers
+    print('n:',numbers)
+print(max(numbers))
+
+
+
+
+
+
+
+
 
 # 경우의수
 # 1X
@@ -137,26 +231,38 @@ for i in range(2**(N-1)):
     if summation > result:
         result = summation 
 
-142
+i=142 ... % 2**j
 j=0 ... 0(무조건...good)
 j=1 ... 0(이진법으로 나눴을 때 1의 값)
-...
-...
-'''
+j=2 ... 2(0~3)
+j=3 ... 6(0~7)
 
-numbers = []
-for i in range(N):
-    numbers.append(list(map(int, input().split())))
+
+
 
 result = 0
 for i in range(2**(N-1)):
+
+
     summation = 0
     temp = 0
+    k = i
+    m = 0
     for j in range(N):
-        k = i % (2**j)
-        print(i, j, k)
-    #     summation += numbers[j][temp+k]
-    #     temp = temp+k
+        l = k % 2
+        m = m + l
+        summation += numbers[j][m]
+        k = k // 2
+
+    if summation > result:
+        result = summation
+
+i = 145 ... % j
+...
+'''
+
+
+    
 
     # if summation > result:
     #     result = summation
