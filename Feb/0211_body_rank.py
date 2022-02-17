@@ -33,23 +33,23 @@ for i in range(N):
 
 
 
-#백준 답
+# #백준 답
 
-N = int(input())
+# N = int(input())
 
-students = []
-for _ in range(N):
-    students.append(list(map(int, input().split()))+[1])
-# print(students)
-# [[55, 185, 1], [58, 183, 1], [88, 186, 1], [60, 175, 1], [46, 155, 1]]
+# students = []
+# for _ in range(N):
+#     students.append(list(map(int, input().split()))+[1])
+# # print(students)
+# # [[55, 185, 1], [58, 183, 1], [88, 186, 1], [60, 175, 1], [46, 155, 1]]
 
-for i in range(N-1):
-    for j in range(i, N):
-        if students[j][0] > students[i][0] and students[j][1] > students[i][1]:
-            students[i][2] += 1
-        elif students[i][0] > students[j][0] and students[i][1] > students[j][1]:
-            students[j][2] += 1
+# for i in range(N-1):
+#     for j in range(i, N):
+#         if students[j][0] > students[i][0] and students[j][1] > students[i][1]:
+#             students[i][2] += 1
+#         elif students[i][0] > students[j][0] and students[i][1] > students[j][1]:
+#             students[j][2] += 1
 
-for i in range(N):
-    print(students[i][2], end=' ')
+# for i in range(N):
+#     print(students[i][2], end=' ')
 
