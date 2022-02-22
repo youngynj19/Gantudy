@@ -24,4 +24,4 @@ else:
 for i in range(R):
     for j in range(C):
         # print(j*R + i%R, end =' ')
-        print(encrypted[j*R + i%R], end ='')
+        print(encrypted[j*R + i], end ='')
