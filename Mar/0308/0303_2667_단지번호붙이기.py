@@ -7,7 +7,7 @@ def dfs_with_delta_search(i, j, N):
     ref = 1 # 집 들를 때 마다 하나씩 더해지는 친구
     # 왔다감 표시
     visited[i][j] = True
-    print(f'visited: {i, j, visited[i][j]}')
+    # print(f'visited: {i, j, visited[i][j]}')
 
     di = [0, 1, 0, -1] # dirction list
     dj = [1, 0, -1, 0]
@@ -18,7 +18,7 @@ def dfs_with_delta_search(i, j, N):
         # 조건1 : 새 좌표는 맵 안에 있어야 한다
         if 0 <= ni < N and 0 <= nj < N:
             # 조건2,3 : 1(집)이어야하며 방문한 적 없어야 한다
-            if map_arr[ni][nj] == 1 and not visited[i][j]:
+            if map_arr[ni][nj] == 1 and not visited[ni][nj]:
                 # 집 한 채씩 더해
                 ref += dfs_with_delta_search(ni, nj, N)
     # 집 한 채씩 더할 수 있게 반환값을 주는거지 + 다 센 집 채수도 반환하고
@@ -48,7 +48,7 @@ for i in range(N):
         # print(f'result: {dfs_with_delta_search(i, j, N)}')
 
 sorted(count)
-print(count)
+print(*count, sep='\n')
 
 
 
