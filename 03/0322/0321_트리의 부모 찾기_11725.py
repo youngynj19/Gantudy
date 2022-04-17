@@ -47,5 +47,4 @@ for _ in range(N-1):
 visited = [False for _ in range(N+1)]
 find_parent(1)
 
-for i in range(2, N+1):
-    print(tree[i])
+print(*tree[2:], sep='\n')
